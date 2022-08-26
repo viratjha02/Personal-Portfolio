@@ -61,7 +61,7 @@ a {
 }
 
 .nav-link:hover {
-    color: dodgerblue;
+     font-weight: bold;
 }
 
 .hamburger {
