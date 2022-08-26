@@ -151,7 +151,7 @@ h5 {
     background-image: url(hero.png);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 20px;
+    margin: 5rem 20px 20px 20px 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -256,12 +256,7 @@ h5 {
     .flex {
         justify-content: center;
     }
-.fa-brands {
-    
-    Padding: 0px 20px;
-    
 
-}
 }
 
 @media(max-width:768px) {
@@ -623,12 +618,7 @@ width: 100%;
         width: 100%;
         width: 90vw;
     }
-    .submit-button{
-        height: 2.5rem;
-        width: 15rem;
-        
-    }
-    
+   
 }
 @media(max-width:550px){
     .formh{
