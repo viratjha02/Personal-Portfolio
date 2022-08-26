@@ -1,0 +1,644 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&Lexend+Deca:wght@200&family=Montserrat:wght@300&Lexend+Deca:wght@200&Russo+One&family=BioRhyme:wght@300;400;700&family=Manrope:wght@200&family=Permanent+Marker&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Responsive Navbar Section Start */
+
+header {
+    background-color: #E1EBEE;
+
+    left: 0;
+    z-index: 1000;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #1F75FE;
+    text-decoration: none;
+    font-weight: 300;
+    font-family: 'BioRhyme', serif;
+}
+
+.navbar {
+    min-height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    box-shadow: 0px 5px 5px #E1EBEE;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.nav-menu {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav-branding {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'BioRhyme', serif;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.nav-link:hover {
+    color: dodgerblue;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 4px;
+    margin: 5px auto;
+    transition: all 0.4s ease-in-out;
+    background-color: #1F75FE;
+    border-radius: 15%;
+}
+
+.bar:nth-child(2) {
+    width: 40px;
+}
+
+@media(max-width:768px) {
+    .hamburger {
+        display: block
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(405deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-405deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 4rem;
+        gap: 0;
+        flex-direction: column;
+        background-color: #E1EBEE;
+        width: 100%;
+
+        text-align: center;
+        transition: 0.3s;
+        font-size: 2rem;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+}
+
+/* Responsive Navbar Section End */
+
+/* Responsive Hero Section Start */
+
+h1 {
+    font-size: 60px;
+    line-height: 35px;
+    font-family: 'Russo One', sans-serif;
+    color: #383838;
+    text-indent: 2px;
+}
+
+h3 {
+    font-size: 30px;
+    font-family: 'Lexend', sans-serif;
+}
+
+h5 {
+    font-size: 25px;
+    font-family: 'BioRhyme', serif;
+
+}
+
+.container {
+    height: 700px;
+    background-image: url(hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.icons {
+
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    cursor: pointer;
+    /* padding: 20px 0px; */
+}
+
+.fa-brands {
+    color: #2385E6;
+    transition: all 0.3s;
+
+}
+
+.fa-brands:hover {
+    scale: 1.05;
+}
+
+.profile-img {
+    height: 350px;
+    width: 350px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 12px #708090;
+    cursor: pointer;
+    transition: all 5s;
+    animation: image 10s infinite;
+}
+
+@keyframes image {
+    0% {
+        background-color: #ffffff;
+    }
+
+    20% {
+        background-color: #cf2418;
+    }
+
+    40% {
+        background-color: #c7fb1d;
+    }
+
+    60% {
+        background-color: #56ec45;
+    }
+
+    80% {
+        background-color: #b636ed;
+    }
+
+    100% {
+        background-color: #ffffff;
+    }
+}
+
+
+
+.btn {
+    background-color: #2385E6;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0px;
+}
+
+.btn:hover {
+    scale: 1.05;
+    opacity: 0.9;
+}
+
+@media(max-width:1280px) {
+    .container {
+        height: 400px;
+    }
+}
+
+@media(max-width:800px) {
+
+    h1 {
+        font-size: 40px;
+        line-height: 25px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    .flex {
+        justify-content: center;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    html {
+        font: 62.5%;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        padding: 20px;
+        height: 700px;
+    }
+
+    .profile-img {
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 40px;
+        line-height: 25px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+}
+
+
+/* Responsive Hero Section End */
+
+/* Responsive Love Section Start */
+
+.heading {
+    font-size: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 800;
+    color: #2385E6;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+
+}
+
+.code-section {
+    /* height: 300px; */
+    padding: 20px;
+    margin: 30px;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.1);
+
+}
+
+.js-section {
+    /* height: 300px; */
+    padding: 20px;
+    margin: 30px;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.1);
+
+}
+
+.brush {
+    /* height: 300px; */
+    padding: 20px;
+    margin: 30px;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.1);
+
+}
+
+.skills h3 {
+    line-height: 5rem;
+    color: #2385E6;
+    font-weight: 100;
+}
+
+.skills span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.skills span i {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background-color: #1262b1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    transition: all 0.3s;
+}
+
+.skills span i:hover {
+    scale: 1.05;
+}
+
+.love-code {
+    color: aliceblue;
+    font-weight: 800;
+}
+
+@media (max-width:1000px) {
+    .skills {
+        flex-wrap: wrap;
+    }
+
+    .code-section {
+        margin: 10px;
+    }
+
+    .js-section {
+        margin: 10px;
+    }
+
+    .brush {
+        margin: 10px;
+    }
+}
+
+/* Responsive Love Section End */
+
+/* Responsive Stuff Section Start */
+
+.stuff {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 90vw;
+    justify-content: flex-start;
+    gap: 3rem;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.1);
+
+}
+
+
+.home-project {
+    padding: 4rem;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    height: 500px;
+    justify-content: space-between;
+
+}
+
+.home-about {
+    padding: 4rem;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    height: 500px;
+    justify-content: space-between;
+    border-left: 2px solid #2385E6;
+}
+
+.stuff-heading {
+    font-size: 50px;
+    line-height: 50px;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 600;
+    color: #2385E6;
+
+}
+
+.stuff-button {
+    border: 1px solid #2385E6;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    width: 240px;
+    transition: all 0.3s linear;
+    overflow: hidden;
+    
+
+}
+.stuff a{
+    font-weight: 800;
+}
+
+.stuff-button::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: #2385E6 ;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    transition: all 0.3s linear;
+}
+.stuff-button:hover{
+    color: white;
+}
+.stuff-button:hover:before{
+    transform: translateY(0%);
+}
+
+.stuff p {
+    font-size: 1.5rem;
+}
+
+@media(max-width:1052px) {
+    .stuff-heading{
+        font-size: 40px;
+        line-height: 40px;
+        height: auto;
+    }
+}
+
+@media(max-width:900px) {
+
+    .stuff{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .stuff-heading{
+        font-size: 20px;
+        line-height: 30px;
+    
+    }
+
+    .home-about{
+        align-items: center;
+        padding: 2rem;
+        justify-content: space-between;
+        gap: 0px;
+        width: 90vw;
+        height: 350px;
+    }
+    .home-project{
+        align-items: center;
+        padding: 2rem;
+        gap: 0px ;
+        justify-content: space-between;
+        width: 90vw;
+        height: 380px;
+        border-right: 2px solid #2385E6;
+    }
+    
+    .stuff-heading{
+        font-size: 50px;
+        line-height: 50px;
+        
+    }
+}
+
+/* Responsive Stuff Section End */
+
+/* Responsive Contact Section Start */
+
+.contact-form{
+    width: 80vw;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    
+}
+.form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 10px;
+}
+.form-data{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+
+}
+
+.user-data{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+h4{
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+.h4{
+    text-align: center;
+    padding-top: 15px;
+}
+.user-data input{
+    border: none;
+    border-bottom: 2px solid #2385E6;
+    height: 40px;
+    outline: none;
+}
+
+.user-data textarea{
+    border: none;
+    border-bottom: 2px solid #2385E6;
+}
+
+.label{
+    color: #2385E6;
+    font-size: 1.2rem;
+    padding: 10px 0px;
+}
+.text-area{
+
+width: 100%;
+
+}
+.text-area textarea{
+    outline: none;
+    resize: none;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.submit-button{
+    height: 3.5rem;
+    width: 18rem;
+    font-size: 1.5rem;
+    font-family: 'Lexend', sans-serif;
+    cursor: pointer;
+    text-align: center;
+    background: none;
+    outline: none;
+}
+.formh{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+@media(max-width:700px){
+    .user-data{
+        width: 100%;
+        width: 90vw;
+    }
+    .submit-button{
+        height: 2.5rem;
+        width: 15rem;
+        
+    }
+    
+}
+@media(max-width:550px){
+    .formh{
+        font-size: 30px;
+    }
+
+    h4{
+        font-size: 15px;
+    }
+}
+
+/* Responsive Contact Section End */
+
+/* Responsive Footer Section Start */
+
+.footer{
+    height: 50px;
+    background-color: #1F75FE ;
+}
