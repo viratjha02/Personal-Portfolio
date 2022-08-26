@@ -169,6 +169,7 @@ h5 {
 
 .fa-brands {
     color: #2385E6;
+
     transition: all 0.3s;
 
 }
@@ -255,7 +256,12 @@ h5 {
     .flex {
         justify-content: center;
     }
+.fa-brands {
+    
+    Padding: 0px 20px;
+    
 
+}
 }
 
 @media(max-width:768px) {
