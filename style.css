@@ -162,14 +162,14 @@ h5 {
 
     display: flex;
     justify-content: flex-start;
-    gap: 1.5rem;
+   /* gap: 1.5rem; */
     cursor: pointer;
     /* padding: 20px 0px; */
 }
 
 .fa-brands {
     color: #2385E6;
-
+    padding: 0 11px
     transition: all 0.3s;
 
 }
